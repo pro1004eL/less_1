@@ -1,4 +1,8 @@
 {
 	"name":"Anton",
-	"email":"anton.kolomiets.91@gmail.com"
+	"email":"anton.kolomiets.91@gmail.com",
+	"friends":{
+		"girls":["Maria","Nastya","Olya"],
+		"mens":["Dima","Sanya"]
+	}
 }
