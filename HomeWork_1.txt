@@ -1,56 +1,70 @@
-Linux terminal
-—ценарий который надо уметь делать
+1) Look where I am 
+ pwd
+2) Create a folder
+ Ч mkdir -p Group-18/Linux_terminal
+3) Go into the folder
+ Ч cd /Users/Anton/Desktop/Group_18/Linux_terminal
+4) Create 3 folders
+ Ч mkdir Lesson_1 Lesson_2 Lesson_3
+5) Go into any folder 
+Ч cd Lesson_1/
+6) Create 5 files (3 .txt, 2 .json)
+ - touch File1.txt File2.txt File3.txt File4.json File5.json
+7) Create 3 folders
+ Ч mkdir Lesson_1.1 Lesson_1.2 Lesson_1.3
+8) List of the folder's content 
+Ч ls -la
+9) Open any .txt file
+ Ч vim File1.txt
+10) + Write anything there, any text 
+Ч press 'I' Ч type any text 
+11) + Save and exit 
+Ч press 'Esc' Ч press :wq Ч press 'Enter'
+12) Navigate up to one directory level up 
+Ч cd ..
+13) Move any 2 files you created to any other folder 
+Ч mv File1.txt File2.txt Lesson_1.1/
+14) Copy any 2 files you created to any other folder 
+Ч cp File4.json File5.json Lesson_1.2/
 
-1) ѕосмотреть где €
-2) —оздать папку
-3) «айти в папку
-4) —оздать 3 папки
-5) «айти в любоую папку
-6) —оздать 5 файлов (3 txt, 2 json)
-7) —оздать 3 папки
-8. ¬ывести список содержимого папки
-9) + ќткрыть любой txt файл
-10) + написать туда что-нибудь, любой текст.
-11) + сохранить и выйти.
-12) ¬ыйти из папки на уровень выше
-Ч
-13) переместить любые 2 файла, которые вы создали, в любую другую папку.
-14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
-15) Ќайти файл по имени
-16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
-17) вывести несколько первых строк из текстового файла
-18) вывести несколько последних строк из текстового файла
-19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
-20) вывести дату и врем€
-=========
+15) Find a file by name 
+Ч find . -name File1.txt
 
-«адание *
-1) ќтправить http запрос на сервер.
-https://api.quarantine.country/api/v1/regions
-2) Ќаписать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+16) View the contents of files in real-time (grep command), learn how it works
 
-=====================
-1) ѕосмотреть где € - pwd
-2) —оздать папку - mkdir foldername
-3) «айти в папку - cd foldername
+    To view the content of the file in real-time I've used the 'more' command. 
+    The syntax is as follows:
+    more FileName
 
-https://losst.ru/nachnite-izuchat-linux-pryamo-sejchas
+    Grep command searches the given file for lines containing a match to the given strings or words.
+    The syntax is as follows:
+    grep 'string' FileName - search any line that contains the 'string' in the FileName
+    grep 'string' FileName_pattern Ч checking for the given string in multiple files
+    grep -i 'string' FileName - case insensitive search using grep -i
+    grep -w 'string' FileName - checking for full words, not for sub-strings
+    grep -r 'string' * - checking for the 'string' in all the files in the current directory and all its subdirectory
 
-” кого Windows , поставьте себе GitBash , у кого Mac и Linux работайте в обычном Terminal
+17) Show the first few lines from a text file 
+Ч head -n 2 File1.txt 
+(where -n 2 is the number of shown lines, by default it will print 10 top lines)
 
-Losst (https://losst.ru/nachnite-izuchat-linux-pryamo-sejchas)
-Ќачните изучать Linux пр€мо сейчас! | Losst
-Ќа этой странице собраны все самые полезные и интересные дл€ новичков и возможно некоторых опытных пользователей в Linux руководства и статьи.
+18) Show the last few lines from a text file
+ - tail -n 2 File1.txt
+(where -n 2 is the number of shown lines, by default it will print 10 top lines)
 
+19)View the content of a large file (less command) learn how it works
+ Ч less FileName
+   The most frequently used commands to navigate through the file content:
+Down arrow, Enter, e, j - Move forward one line
+Up arrow, y, k - Move backward one line
+Space bar or f - Move Forward one page
+b - Move Backward one page
+n - Repeat previous search
+N - Repeat previous search in reverse direction
+g - Go to the first line in the file
+Ng - Go to the N-th line in the file
+G - Go to the last line in the file
+q - Exit less.
 
-===============================================
-¬от одна из частей практической программы. “ут идЄт отработка теории, но это нужно проработать дл€ собесов.
-
-5 part of practice
-https://docs.google.com/document/d/1S9uw-eI_xgLE-BfZU6qb2oLBLWnpH8cu26hFFmaRT7c/edit?usp=sharing
-
-»щите ответы в интернете, изучаете и своими словами пишите ответы на вопросы. ¬ыгружаете в свой гит.
-
-Google Docs (https://docs.google.com/document/d/1S9uw-eI_xgLE-BfZU6qb2oLBLWnpH8cu26hFFmaRT7c/edit?usp=sharing)
-5 part of practice
-„то подразумеваетс€ под тестовой средой? ¬ чем отличие build от release? ќсновные фазы тестировани€? „то такое импакт анализ?
+20) Show date and time 
+Ч date
